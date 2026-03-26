@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint Formulae
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Brew style check
+        run: |
+          if ls Formula/*.rb 1>/dev/null 2>&1; then
+            brew style Formula/*.rb
+          else
+            echo "No formulae to lint yet"
+          fi
