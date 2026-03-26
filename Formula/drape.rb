@@ -5,21 +5,21 @@
 class Drape < Formula
   desc "CLI for uploading test results and coverage to Drape"
   homepage "https://drape.io"
-  version "0.1.0"
+  version "0.1.1"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.0/drape_0.1.0_darwin_amd64.tar.gz"
-      sha256 "9a5f91595e9e9ef52bbefb1052e03058b2bfb1794ae5ae83f8c10de3da2b4418"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.1/drape_0.1.1_darwin_amd64.tar.gz"
+      sha256 "8a3083816c88e3574f9938f486456a1ac151c0581681fcb5bffbb9af9302f870"
 
       define_method(:install) do
         bin.install "drape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.0/drape_0.1.0_darwin_arm64.tar.gz"
-      sha256 "b71db7b88d7e536772cdfac516de98f7e9c0cb10d748705e15eafe3f0c9bd88d"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.1/drape_0.1.1_darwin_arm64.tar.gz"
+      sha256 "6fc8e17c1fca95c125de6ea94dc88574149cfc9eae00489258fe9a388c813d87"
 
       define_method(:install) do
         bin.install "drape"
@@ -29,15 +29,15 @@ class Drape < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.0/drape_0.1.0_linux_amd64.tar.gz"
-      sha256 "82529066ae2afe779caecfdeeff8c8467423f6e10deb3af8a60b2709c83c5b88"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.1/drape_0.1.1_linux_amd64.tar.gz"
+      sha256 "fd7d0712767e7f066e22c5b63f75d8e85108efe75a2b44427d259eb7e6c9d97f"
       define_method(:install) do
         bin.install "drape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.0/drape_0.1.0_linux_arm64.tar.gz"
-      sha256 "21dbbda7a5f8731b557e34a80ae806b5cf24e3fe2b2ea88eaa2e5a9abccab4f1"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.1/drape_0.1.1_linux_arm64.tar.gz"
+      sha256 "7e2aa48bc73a39aaadaffa8dca6afaeb60b33547d2615c63d83345e7e3e5a707"
       define_method(:install) do
         bin.install "drape"
       end
