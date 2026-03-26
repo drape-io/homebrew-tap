@@ -5,21 +5,21 @@
 class Drape < Formula
   desc "CLI for uploading test results and coverage to Drape"
   homepage "https://drape.io"
-  version "0.1.2"
+  version "0.1.3"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.2/drape_darwin_amd64.tar.gz"
-      sha256 "e283816aff27b9176075868727baed14c6ae38e288e1a665d1bb025da62930f8"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.3/drape_darwin_amd64.tar.gz"
+      sha256 "1dbd971c452424577ae12eded83a1a2bd7bec5942a3ffe9c3c4dbfffd1f64dd1"
 
       define_method(:install) do
         bin.install "drape"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.2/drape_darwin_arm64.tar.gz"
-      sha256 "4376e82f270a523d0ee0b9b8da7b264e052667dd55e498d58b417d40e1c8c09b"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.3/drape_darwin_arm64.tar.gz"
+      sha256 "485676bf4425698d2d1174a659adb132c8b8977bdaf4191e066169a7094ea4e8"
 
       define_method(:install) do
         bin.install "drape"
@@ -29,15 +29,15 @@ class Drape < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.2/drape_linux_amd64.tar.gz"
-      sha256 "a355372849c56e07d754bb0e90683e02d658baec6703df565861ba14ae735055"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.3/drape_linux_amd64.tar.gz"
+      sha256 "28ec5acd08466c9c846f9f98d46c9c96c8f7081738f22dc2c24f0df5bcf4c765"
       define_method(:install) do
         bin.install "drape"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.2/drape_linux_arm64.tar.gz"
-      sha256 "d523eae76e2d936c5563724271b19f20c4c74c6f2fa0fc38e8a0b618af09af28"
+      url "https://github.com/drape-io/drape-cli/releases/download/v0.1.3/drape_linux_arm64.tar.gz"
+      sha256 "50e8184bd0664af2d31ea9d6800763de52e255258f90bd4683ef79173c5285eb"
       define_method(:install) do
         bin.install "drape"
       end
